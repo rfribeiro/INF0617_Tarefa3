@@ -5,6 +5,7 @@ import csv
 
 conf = SparkConf().setAppName('Tarefa03')
 sc = SparkContext(conf=conf)
+sc.setLogLevel("ERROR")
 
 vote_file = sc.textFile("/tmp/data/votacao_secao_2014_SP.txt")
 
