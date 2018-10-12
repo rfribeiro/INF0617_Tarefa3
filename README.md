@@ -1,5 +1,7 @@
 # INF0617_Tarefa3
 
+`copy votacao_secao_2014_SP.txt to /data/votes folder`
+
 `copy map_votes.py to your /data folder`
 
 `copy reduce_votes.py to your /data folder`
