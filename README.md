@@ -1,9 +1,10 @@
 # INF0617_Tarefa3
 
-copy map_votes.py to your /data folder
-copy reduce_votes.py to your /data folder
+`copy map_votes.py to your /data folder`
 
-$HADOOP_HOME/bin/hadoop  jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-3.0.0.jar \
+`copy reduce_votes.py to your /data folder`
+
+`$HADOOP_HOME/bin/hadoop  jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-3.0.0.jar \
     -D mapreduce.job.output.key.comparator.class=org.apache.hadoop.mapred.lib.KeyFieldBasedComparator \
     -D stream.reduce.output.field.separator=" " \
     -D stream.num.reduce.output.key.fields=2 \
@@ -12,9 +13,9 @@ $HADOOP_HOME/bin/hadoop  jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streamin
     -input /tmp/data/votes \
     -output /tmp/data/votes_out \
     -mapper "python map_votes.py" \
-    -reducer "python reduce_votes.py"
+    -reducer "python reduce_votes.py"`
     
-$HADOOP_HOME/bin/hdfs dfs -cat /tmp/data/votes_out/part-00000 | sort -k2nr
+`$HADOOP_HOME/bin/hdfs dfs -cat /tmp/data/votes_out/part-00000 | sort -k2nr`
 
 
 # resultado da eleições
